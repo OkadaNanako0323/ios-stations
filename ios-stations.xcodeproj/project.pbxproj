@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		BE7131462688C07700E3EAB8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7131452688C07600E3EAB8 /* WebKit.framework */; };
 		BE713148268B3CF000E3EAB8 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE713147268B3CF000E3EAB8 /* UIColor+Theme.swift */; };
 		BE71314A268B4CA400E3EAB8 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE713149268B4CA400E3EAB8 /* BookCell.swift */; };
+		C5CE9AB82CB6EC680021E001 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C5CE9AB72CB6EC680021E001 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BE7131452688C07600E3EAB8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BE713147268B3CF000E3EAB8 /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		BE713149268B4CA400E3EAB8 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		C5CE9AB92CB837E20021E001 /* ios-stations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-stations-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7131462688C07700E3EAB8 /* WebKit.framework in Frameworks */,
+				C5CE9AB82CB6EC680021E001 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +131,7 @@
 				BE245149266FBEE10038AD81 /* Assets.xcassets */,
 				BE24514B266FBEE10038AD81 /* LaunchScreen.storyboard */,
 				BE665EE026817723006F4F2C /* Info.plist */,
+				C5CE9AB92CB837E20021E001 /* ios-stations-Bridging-Header.h */,
 			);
 			path = "ios-stations";
 			sourceTree = "<group>";
@@ -174,6 +178,9 @@
 			dependencies = (
 			);
 			name = "ios-stations";
+			packageProductDependencies = (
+				C5CE9AB72CB6EC680021E001 /* Alamofire */,
+			);
 			productName = "ios-stations";
 			productReference = BE24513D266FBEE00038AD81 /* ios-stations.app */;
 			productType = "com.apple.product-type.application";
@@ -220,11 +227,13 @@
 		BE245135266FBEE00038AD81 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					BE24513C266FBEE00038AD81 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1540;
 					};
 					BE245152266FBEE10038AD81 = {
 						CreatedOnToolsVersion = 12.5;
@@ -246,6 +255,9 @@
 				ja,
 			);
 			mainGroup = BE245134266FBEE00038AD81;
+			packageReferences = (
+				C5CE9AB62CB6EA840021E001 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BE24513E266FBEE00038AD81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -398,6 +411,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -427,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -461,6 +476,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -485,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-stations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,6 +510,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.techbowl.ios-stations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-stations/ios-stations-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -503,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-stations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.techbowl.ios-stations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-stations/ios-stations-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -636,6 +657,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5CE9AB62CB6EA840021E001 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5CE9AB72CB6EC680021E001 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5CE9AB62CB6EA840021E001 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE245135266FBEE00038AD81 /* Project object */;
 }

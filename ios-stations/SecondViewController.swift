@@ -9,6 +9,8 @@ import WebKit
 class SecondViewController: UIViewController {
 
     private var webView: WKWebView!
+    
+    //ここでFirstVCのurlを受け取る
     private var url: String!
     
     init(url: String) {
@@ -20,6 +22,7 @@ class SecondViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    //URLを表示
     override func viewDidLoad() {
         super.viewDidLoad()
         
