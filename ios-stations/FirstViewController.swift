@@ -8,53 +8,37 @@ import UIKit
 class FirstViewController: UIViewController {
     
     var books: [Book]?
-    var loadingAnimation = UIActivityIndicatorView()
     let bookDate = BookAPIClient()
     let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func fetchBooks(_ sender: Any) {
-        tableView.isHidden = true
         
-        loadingAnimation.startAnimating()
-        
-        DispatchQueue.global(qos: .default).async {
-           //処理を2秒停止
-            Thread.sleep(forTimeInterval: 2)
-            
-            self.bookDate.fetchBooks(offset: 10) { books in
-                if let books = books {
+        self.bookDate.fetchBooks(offset: self.books?.count ?? 0) { books in
+            if let books = books {
+                if self.books == nil {
                     //ここでbook配列にデータがBookのインスタンスが格納される
                     self.books = books
-                    //リロードして画面に表示
-                    self.tableView.reloadData()
-                    //リロードしたらtableViewを表示
-                    self.tableView.isHidden = false
-                    
                 } else {
-                    //エラーしたら…
-                    print("データの取得に失敗")
+                    //リロードして画面に表示
+                    self.books?.append(contentsOf: books)
                 }
+                self.tableView.reloadData()
                 
+            } else {
+                //エラーしたら…
+                print("データの取得に失敗")
             }
-            DispatchQueue.main.async {
-                self.loadingAnimation.stopAnimating()
-            }
+            
         }
     }
     
-  
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //インジケーター
-        loadingAnimation.center = view.center
-        loadingAnimation.color = .purple
-        view.addSubview(loadingAnimation)
-        
         //これないと表示されない
         //self = FirstViewController
         tableView.dataSource = self
@@ -70,15 +54,16 @@ class FirstViewController: UIViewController {
     
     //リロード
     @objc func refreshTableView(){
-        self.bookDate.fetchBooks(offset: 10) { books in
+        self.books = nil
+        self.bookDate.fetchBooks(offset: 0) { [weak self] books in
+            guard let self = self else { return }
             if let books = books {
-                //ここでbook配列にデータがBookのインスタンスが格納される
                 self.books = books
-                self.tableView.refreshControl?.endRefreshing()
-                //リロードして画面に表示
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.refreshControl?.endRefreshing()
+                    self.tableView.reloadData()
+                }
             } else {
-                //エラーしたら…
                 print("データの取得に失敗")
             }
         }
