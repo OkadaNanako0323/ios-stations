@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-UW-T1J">
+                                <rect key="frame" x="100" y="338" width="193" height="34.333333333333314"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="サインイン">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToSinginView:" destination="Jyh-e8-tqM" eventType="touchUpInside" id="YOj-LM-oQH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pu-eu-RPA">
+                                <rect key="frame" x="100" y="432.33333333333331" width="193" height="34.333333333333314"/>
+                                <color key="backgroundColor" red="0.67921292516679321" green="0.79989632177449688" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ログイン">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToLoginView:" destination="Jyh-e8-tqM" eventType="touchUpInside" id="4c3-44-ieh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AcP-UW-T1J" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="279" id="8RF-c6-hIF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3pu-eu-RPA" secondAttribute="bottom" constant="351.32999999999998" id="Bpw-SW-B2e"/>
+                            <constraint firstItem="AcP-UW-T1J" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="KMy-mH-Kqp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3pu-eu-RPA" secondAttribute="trailing" constant="100" id="cC6-5u-52E"/>
+                            <constraint firstItem="3pu-eu-RPA" firstAttribute="top" secondItem="AcP-UW-T1J" secondAttribute="bottom" constant="60" id="eOp-8v-kEF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AcP-UW-T1J" secondAttribute="trailing" constant="100" id="mJH-C1-tRO"/>
+                            <constraint firstItem="3pu-eu-RPA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="o55-Wo-hgE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Jyh-e8-tqM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

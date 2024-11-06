@@ -22,6 +22,13 @@
 		BE7131462688C07700E3EAB8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7131452688C07600E3EAB8 /* WebKit.framework */; };
 		BE713148268B3CF000E3EAB8 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE713147268B3CF000E3EAB8 /* UIColor+Theme.swift */; };
 		BE71314A268B4CA400E3EAB8 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE713149268B4CA400E3EAB8 /* BookCell.swift */; };
+		C56313A32CDBB717002BD976 /* LoginSingInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56313A22CDBB717002BD976 /* LoginSingInViewController.storyboard */; };
+		C56313A52CDBB732002BD976 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56313A42CDBB732002BD976 /* SignInViewController.storyboard */; };
+		C56313A72CDBB759002BD976 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56313A62CDBB759002BD976 /* LoginViewController.storyboard */; };
+		C56313A92CDBC3B9002BD976 /* LoginSigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56313A82CDBC3B9002BD976 /* LoginSigninViewController.swift */; };
+		C56313AB2CDBC42B002BD976 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56313AA2CDBC42B002BD976 /* SignInViewController.swift */; };
+		C56313AD2CDBC4DA002BD976 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56313AC2CDBC4DA002BD976 /* LoginViewController.swift */; };
+		C56313AF2CDBD218002BD976 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56313AE2CDBD218002BD976 /* AuthService.swift */; };
 		C5CE9AB82CB6EC680021E001 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C5CE9AB72CB6EC680021E001 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +71,13 @@
 		BE7131452688C07600E3EAB8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BE713147268B3CF000E3EAB8 /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		BE713149268B4CA400E3EAB8 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		C56313A22CDBB717002BD976 /* LoginSingInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSingInViewController.storyboard; sourceTree = "<group>"; };
+		C56313A42CDBB732002BD976 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
+		C56313A62CDBB759002BD976 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		C56313A82CDBC3B9002BD976 /* LoginSigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSigninViewController.swift; sourceTree = "<group>"; };
+		C56313AA2CDBC42B002BD976 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C56313AC2CDBC4DA002BD976 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C56313AE2CDBD218002BD976 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C5CE9AB92CB837E20021E001 /* ios-stations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-stations-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +134,15 @@
 			children = (
 				617F70BD29C2BD4B00B7AFFE /* testResources */,
 				BE245140266FBEE00038AD81 /* AppDelegate.swift */,
-				BE7131362685ED0F00E3EAB8 /* Book.swift */,
 				BE245142266FBEE00038AD81 /* SceneDelegate.swift */,
+				C56313A22CDBB717002BD976 /* LoginSingInViewController.storyboard */,
+				C56313A82CDBC3B9002BD976 /* LoginSigninViewController.swift */,
+				C56313A42CDBB732002BD976 /* SignInViewController.storyboard */,
+				C56313AA2CDBC42B002BD976 /* SignInViewController.swift */,
+				C56313A62CDBB759002BD976 /* LoginViewController.storyboard */,
+				C56313AC2CDBC4DA002BD976 /* LoginViewController.swift */,
+				BE7131362685ED0F00E3EAB8 /* Book.swift */,
+				C56313AE2CDBD218002BD976 /* AuthService.swift */,
 				BE245144266FBEE00038AD81 /* FirstViewController.swift */,
 				BE7131382685ED7600E3EAB8 /* BookAPIClient.swift */,
 				BE713149268B4CA400E3EAB8 /* BookCell.swift */,
@@ -229,7 +250,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					BE24513C266FBEE00038AD81 = {
 						CreatedOnToolsVersion = 12.5;
@@ -277,7 +298,10 @@
 				617F70BE29C2BD4B00B7AFFE /* testResources in Resources */,
 				BE24514D266FBEE10038AD81 /* LaunchScreen.storyboard in Resources */,
 				BE24514A266FBEE10038AD81 /* Assets.xcassets in Resources */,
+				C56313A52CDBB732002BD976 /* SignInViewController.storyboard in Resources */,
 				BE245148266FBEE00038AD81 /* Main.storyboard in Resources */,
+				C56313A72CDBB759002BD976 /* LoginViewController.storyboard in Resources */,
+				C56313A32CDBB717002BD976 /* LoginSingInViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +334,10 @@
 				BE245141266FBEE00038AD81 /* AppDelegate.swift in Sources */,
 				BE7131372685ED0F00E3EAB8 /* Book.swift in Sources */,
 				BE245143266FBEE00038AD81 /* SceneDelegate.swift in Sources */,
+				C56313AB2CDBC42B002BD976 /* SignInViewController.swift in Sources */,
+				C56313A92CDBC3B9002BD976 /* LoginSigninViewController.swift in Sources */,
+				C56313AD2CDBC4DA002BD976 /* LoginViewController.swift in Sources */,
+				C56313AF2CDBD218002BD976 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +568,6 @@
 		BE24516B266FBEE10038AD81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-stationsTests/Info.plist";
@@ -561,7 +588,6 @@
 		BE24516C266FBEE10038AD81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-stationsTests/Info.plist";
@@ -582,7 +608,6 @@
 		BE24516E266FBEE10038AD81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-stationsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,7 +626,6 @@
 		BE24516F266FBEE10038AD81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-stationsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
